@@ -24,7 +24,6 @@ module.exports = () => {
         template: "./index.html",
         title: "J.A.T.E",
       }),
-      new MiniCssExtractPlugin(),
       // Injects the custom service worker
       new InjectManifest({
         swSrc: "./src-sw.js",
@@ -54,7 +53,7 @@ module.exports = () => {
       rules: [
         {
           test: /\.css$/i,
-          use: [MiniCssExtractPlugin.loader, 'css-loader'],
+          use: ['style-loader', 'css-loader'],
         },
         // Image loader
         {
