@@ -49,7 +49,25 @@ module.exports = () => {
     ],
 
     module: {
-      rules: [],
+      // CSS loader
+      rules: [
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader'],
+        },
+        {
+          test: /\.m?js$/,
+          exclude: /node_modules/,
+          // Babel-loader in order to use ES6.
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
+            },
+          },
+        },
+      ],
     },
   };
 };
