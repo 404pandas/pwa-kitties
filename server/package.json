@@ -1,14 +1,14 @@
 {
     "name": "JATE",
     "version": "1.0.0",
-    "description": "",
+    "description": "Text editor application converted to PWA",
     "main": "server.js",
     "scripts": {
         "server": "nodemon server.js --ignore client"
     },
     "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "author": "Mary Elenius",
+    "license": "MIT",
     "dependencies": {
         "express": "^4.17.1"
     },

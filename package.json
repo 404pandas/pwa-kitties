@@ -1,19 +1,27 @@
 {
   "name": "JATE",
   "version": "1.0.0",
-  "description": "",
+  "description": "Text editor application converted to PWA",
   "main": "server.js",
   "scripts": {
-    "start:dev": "",
-    "start": "",
-    "server": "",
-    "build": "",
-    "install": "",
-    "client": ""
+    "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\" ",
+    "start": "npm run build && cd server && node server.js",
+    "server": "cd server node server.js --ignore client",
+    "build": "cd client && npm run build",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "client": "cd client && npm start"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Mary Elenius",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/404pandas/pwa-jate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/404pandas/pwa-jate/issues"
+  },
+  "homepage": "https://github.com/404pandas/pwa-jate#readme",
   "dependencies": {
     "express": "^4.17.1",
     "if-env": "^1.0.4"
