@@ -1,10 +1,9 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const WebpackPwaManifest = require("webpack-pwa-manifest");
 const path = require("path");
+// Require the InjectManifest class of the WorkBoxPlugin 
 const { InjectManifest } = require("workbox-webpack-plugin");
-
-// TODO: Add and configure workbox plugins for a service worker and manifest file.
-// TODO: Add CSS loaders and babel to webpack.
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = () => {
   return {
@@ -12,7 +11,6 @@ module.exports = () => {
     entry: {
       main: "./src/js/index.js",
       install: "./src/js/install.js",
-      editor: "./src/js/editor.js"
     },
     output: {
       filename: "[name].bundle.js",
@@ -24,6 +22,8 @@ module.exports = () => {
         template: "./index.html",
         title: "J.A.T.E",
       }),
+      // Css extract plugin
+      new MiniCssExtractPlugin(),
       // Injects the custom service worker
       new InjectManifest({
         swSrc: "./src-sw.js",
@@ -36,6 +36,9 @@ module.exports = () => {
         name: "Just Another Text Editor",
         short_name: "J.A.T.E",
         description: "Don't forget to leave a note!",
+        // Variable Monokai in CSS background color is #272822
+        background_color: '#272822',
+        theme_color: "#272822",
         start_url: "./",
         publicPath: "./",
         icons: [
@@ -49,11 +52,13 @@ module.exports = () => {
     ],
 
     module: {
-      // CSS loader
       rules: [
+        // CSS loader
+        // Reminder- An 'i' after a regular expression specifies
+        // that the test requires a case-insensitive match
         {
           test: /\.css$/i,
-          use: ['style-loader', 'css-loader'],
+          use: [MiniCssExtractPlugin.loader, 'css-loader'],
         },
         // Image loader
         {
