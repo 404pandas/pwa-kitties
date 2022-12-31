@@ -104,7 +104,8 @@ If you would like to run the app locally, follow the below installation instruct
 ## Usage
 
 Please enjoy this video of the application being used
-Video here
+
+https://user-images.githubusercontent.com/113853550/210156219-86730486-c9de-476a-a46e-efbd222a1651.mp4
 
 To run in the app locally, simply run `npm i` to install all the dependencies.
 
