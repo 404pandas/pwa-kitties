@@ -16,7 +16,7 @@ const initdb = async () =>
   });
 
 // Exports a function to POST to the database.
-export const putDb = async (name, home, cell, email) => {
+export const putDb = async (content) => {
   console.log('Post to the database');
 
   // Creates a connection to the jate database and version.
@@ -28,8 +28,8 @@ export const putDb = async (name, home, cell, email) => {
   // Opens up the desired object store.
   const store = tx.objectStore('jate');
 
-  // Uses the .add() method on the store and passes in the content.
-  const request = store.add({ name: name, home_phone: home, cell_phone: cell, email: email });
+  // Uses the .put() method on the store and passes in the content.
+  const request = store.put({ id: 1, jate: content });
 
   // Gets confirmation of the request.
   const result = await request;
@@ -38,7 +38,7 @@ export const putDb = async (name, home, cell, email) => {
 
 // Exports a function to get the database.
 export const getDb = async () => {
-  console.log('Get the database');
+  console.log('Get all notes from the database');
 
   // Creates a connection to the jate database and version.
   const jateDb = await openDB('jate', 1);
