@@ -26,7 +26,7 @@
     <a href="https://github.com/404pandas/pwa-kitties"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/404pandas/pwa-kitties">View Demo</a>
+    <a href="https://pwa-kitties.herokuapp.com/">View App</a>
     ·
     <a href="https://github.com/404pandas/pwa-kitties/issues">Report Bug</a>
     ·
@@ -90,7 +90,7 @@ This project was built using Webpack, Babel, and CodeMirror to create a progress
 ## Getting Started
 
 This app is fully functional and live at:
-Live link here
+https://pwa-kitties.herokuapp.com/
 
 If you would like to run the app locally, follow the below installation instructions
 
@@ -110,7 +110,7 @@ To run in the app locally, simply run `npm i` to install all the dependencies.
 
 Then, run `npm run start` to launch the application
 
-To install the application, open the application at https://localhost:3000 and click on the install button
+To install the application while it's running locally, open the application at https://localhost:3000 and click on the install button
 
 Follow the prompts to complete the installation to operate this app offline!
 
@@ -153,7 +153,7 @@ See LICENSE.txt for more information.
 Mary Elenius - mary.panda.jackson@gmail.com
 
 Repo Link: [https://github.com/404pandas/pwa-kitties](https://github.com/404pandas/pwa-kitties)
-Live Link: [https://github.com/404pandas/pwa-kitties](https://github.com/404pandas/pwa-kitties)
+Live Link: [https://pwa-kitties.herokuapp.com/](https://pwa-kitties.herokuapp.com/)
 
 <!-- ACKNOWLEDGMENTS -->
 
