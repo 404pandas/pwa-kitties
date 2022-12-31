@@ -1,18 +1,18 @@
 {
-    "name": "JATE",
-    "version": "1.0.0",
-    "description": "Text editor application converted to PWA",
-    "main": "server.js",
-    "scripts": {
-        "server": "nodemon server.js --ignore client"
-    },
-    "keywords": [],
-    "author": "Mary Elenius",
-    "license": "MIT",
-    "dependencies": {
-        "express": "^4.17.1"
-    },
-    "devDependencies": {
-        "nodemon": "^2.0.4"
-    }
+  "name": "pwa-kitties",
+  "version": "1.0.0",
+  "description": "Text editor application converted to PWA",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon server.js --ignore client"
+  },
+  "keywords": [],
+  "author": "Mary Elenius",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }

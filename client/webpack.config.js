@@ -20,7 +20,7 @@ module.exports = () => {
       // Webpack plugin that generates the html file and injects the bundles.
       new HtmlWebpackPlugin({
         template: "./index.html",
-        title: "J.A.T.E",
+        title: "K.I.T.T.I.E.S",
       }),
       // Css extract plugin
       new MiniCssExtractPlugin(),
@@ -33,17 +33,17 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: "Just Another Text Editor",
-        short_name: "J.A.T.E",
-        description: "Don't forget to leave a note!",
-        // Variable Monokai in CSS background color is #272822
-        background_color: '#272822',
-        theme_color: "#272822",
+        name: "Kitten Impregnable Thoughts Text In-Line Editing Software",
+        short_name: "K.I.T.T.I.E.S.",
+        description: "Thoughts that even cats can't tear up!",
+        // Theme and background color pulled from duotone-light.min.css
+        background_color: '#faf8f5',
+        theme_color: "#b29762",
         start_url: "./",
         publicPath: "./",
         icons: [
           {
-            src: path.resolve("src/images/logo.png"),
+            src: path.resolve("src/images/logoNew.png"),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join("assets", "icons"),
           },

@@ -1,5 +1,5 @@
 {
-  "name": "JATE",
+  "name": "pwa-kitties",
   "version": "1.0.0",
   "description": "Text editor application converted to PWA",
   "main": "server.js",
@@ -16,12 +16,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/404pandas/pwa-jate.git"
+    "url": "git+https://github.com/404pandas/pwa-kitties.git"
   },
   "bugs": {
-    "url": "https://github.com/404pandas/pwa-jate/issues"
+    "url": "https://github.com/404pandas/pwa-kitties/issues"
   },
-  "homepage": "https://github.com/404pandas/pwa-jate#readme",
+  "homepage": "https://github.com/404pandas/pwa-kitties#readme",
   "dependencies": {
     "express": "^4.17.1",
     "if-env": "^1.0.4"

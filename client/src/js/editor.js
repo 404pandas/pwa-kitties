@@ -14,11 +14,14 @@ export default class {
     this.editor = CodeMirror(document.querySelector('#main'), {
       value: '',
       mode: 'javascript',
-      theme: 'monokai',
+      // The theme to style the editor with.
+      theme: 'duotone-light',
       lineNumbers: true,
       lineWrapping: true,
       autofocus: true,
+      // How many spaces a block (whatever that means in the edited language) should be indented. The default is 2.
       indentUnit: 2,
+      // The width of a tab character. Defaults to 4.
       tabSize: 2,
     });
 
@@ -33,7 +36,7 @@ export default class {
       localStorage.setItem('content', this.editor.getValue());
     });
 
-    // Save the content of the editor when the editor itself is loses focus
+    // Save the content of the editor when the editor itself loses focus
     this.editor.on('blur', () => {
       console.log('The editor has lost focus');
       putDb(localStorage.getItem('content'));
