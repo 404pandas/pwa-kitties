@@ -28,12 +28,12 @@ export const putDb = async (content) => {
   // Opens up the desired object store.
   const store = tx.objectStore("kitties");
 
-  // Uses the .add() method on the store and passes in the content.
-  const request = store.add({ id: id, kitties: content });
+  // Uses the .put() method on the store and passes in the content.
+  const request = store.put({ id: 1, kitties: content });
 
   // Gets confirmation of the request.
   const result = await request;
-  console.log("Data saved to the database:", result);
+  console.log("Data saved to the database:", result.kitties);
 };
 
 // Exports a function to get the database.
@@ -49,16 +49,16 @@ export const getDb = async () => {
   // Opens up the desired object store.
   const store = tx.objectStore("kitties");
 
-  // Uses the .getAll() method to retrieve all values that match the query
+  // Uses the .get(1) method to retrieve the value of the first record matching the query.
 
-  const request = store.getAll();
+  const request = store.get(1);
 
   // Gets confirmation of the request.
   const result = await request;
   result
-    ? console.log("Notes retrieved from database:", result)
+    ? console.log("Notes retrieved from database:", result.kitties)
     : console.log("No notes found in database!");
-  return result?.value;
+  return result?.kitties;
 };
 
 // Starts database
