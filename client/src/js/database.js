@@ -56,7 +56,7 @@ export const getDb = async () => {
   // Gets confirmation of the request.
   const result = await request;
   result
-    ? console.log("Notes retrieved from database:", result.value)
+    ? console.log("Notes retrieved from database:", result)
     : console.log("No notes found in database!");
   return result?.value;
 };
