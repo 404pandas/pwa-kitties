@@ -20,6 +20,7 @@ module.exports = () => {
       new HtmlWebpackPlugin({
         template: "./index.html",
         title: "K.I.T.T.I.E.S",
+        favicon: "./favicon.ico",
       }),
       // Injects the custom service worker
       new InjectManifest({

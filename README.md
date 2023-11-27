@@ -16,7 +16,7 @@
 
 <div align="center">
   <a href="https://github.com/404pandas/pwa-kitties">
-    <img src="/client/src/images/logoNew.png" alt="Logo" width="80" height="80">
+    <img src="./client/src/images/logoNew.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">K.I.T.T.I.E.S.</h3>
@@ -26,7 +26,7 @@
     <a href="https://github.com/404pandas/pwa-kitties"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://pwa-kitties.herokuapp.com/">View App</a>
+    <a href="https://pwa-kitties.onrender.com/">View App</a>
     ·
     <a href="https://github.com/404pandas/pwa-kitties/issues">Report Bug</a>
     ·
@@ -74,7 +74,7 @@ This project was built using Webpack, Babel, and CodeMirror to create a progress
 
 [![Javascript](https://img.shields.io/badge/Language-JavaScript-ff0000?style=plastic&logo=JavaScript&logoWidth=10)](https://javascript.info/)
 [![HTML](https://img.shields.io/badge/Language-HTML/CSS-ff8000?style=plastic&logo=HTML5&logoWidth=10)](https://html.com/)
-[![Heroku](https://img.shields.io/badge/Cloud-Heroku-00ff00?style=plastic&logo=Heroku&logoWidth=10)](https://devcenter.heroku.com/categories/reference)
+[![Render](https://img.shields.io/badge/Deployment-Render-00ff00?style=plastic&logo=render&logoWidth=10)](https://render.com)
 [![Node.js](https://img.shields.io/badge/Framework-Node.js-ff0000?style=plastic&logo=Node.js&logoWidth=10)](https://nodejs.org/en/)
 [![Express](https://img.shields.io/badge/Framework-Express-80ff00?style=plastic&logo=Express&logoWidth=10)](https://expressjs.com/)
 [![npm](https://img.shields.io/badge/Tools-npm-ff0000?style=plastic&logo=npm&logoWidth=10)](https://www.npmjs.com/)
@@ -90,7 +90,7 @@ This project was built using Webpack, Babel, and CodeMirror to create a progress
 ## Getting Started
 
 This app is fully functional and live at:
-https://pwa-kitties.herokuapp.com/
+https://pwa-kitties.onrender.com/
 
 If you would like to run the app locally, follow the below installation instructions
 
@@ -105,7 +105,7 @@ If you would like to run the app locally, follow the below installation instruct
 
 Please enjoy this video of the application being used
 
-https://user-images.githubusercontent.com/113853550/210156219-86730486-c9de-476a-a46e-efbd222a1651.mp4
+(in development)
 
 To run in the app locally, simply run `npm i` to install all the dependencies.
 
@@ -119,8 +119,10 @@ Follow the prompts to complete the installation to operate this app offline!
 
 ## Roadmap
 
-- [ X ] MVP
-- [ X ] Cat theme
+- [x] MVP
+- [x] Cat theme
+- [x] Deploy to render
+- [ ] Create walkthrough video
 
 See the [open issues](https://github.com/404pandas/pwa-kitties/issues) for a full list of proposed features (and known issues).
 
@@ -154,7 +156,7 @@ See LICENSE.txt for more information.
 Mary Elenius - mary.panda.jackson@gmail.com
 
 Repo Link: [https://github.com/404pandas/pwa-kitties](https://github.com/404pandas/pwa-kitties)
-Live Link: [https://pwa-kitties.herokuapp.com/](https://pwa-kitties.herokuapp.com/)
+Live Link: [https://pwa-kitties.onrender.com/](https://pwa-kitties.onrender.com/)
 
 <!-- ACKNOWLEDGMENTS -->
 
