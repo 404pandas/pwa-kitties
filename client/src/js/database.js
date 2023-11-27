@@ -28,8 +28,8 @@ export const putDb = async (content) => {
   // Opens up the desired object store.
   const store = tx.objectStore("kitties");
 
-  // Uses the .put() method on the store and passes in the content.
-  const request = store.put({ id: 1, kitties: content });
+  // Uses the .add() method on the store and passes in the content.
+  const request = store.add({ id: 1, kitties: content });
 
   // Gets confirmation of the request.
   const result = await request;
@@ -49,9 +49,9 @@ export const getDb = async () => {
   // Opens up the desired object store.
   const store = tx.objectStore("kitties");
 
-  // Uses the .get(1) method to retrieve the value of the first record matching the query.
+  // Uses the .getAll() method to retrieve all values that match the query
 
-  const request = store.get(1);
+  const request = store.getAll();
 
   // Gets confirmation of the request.
   const result = await request;
