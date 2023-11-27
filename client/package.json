@@ -2,7 +2,7 @@
   "name": "pwa-kitties",
   "scripts": {
     "dev": "webpack-dev-server",
-    "build": "webpack",
+    "build": "webpack --mode production",
     "start": "webpack --watchAll"
   },
   "author": "Mary Elenius",
