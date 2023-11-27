@@ -15,7 +15,7 @@ export default class {
       value: "",
       mode: "javascript",
       // The theme to style the editor with.
-      theme: "duotone-light",
+      theme: "toy-chest",
       lineNumbers: true,
       lineWrapping: true,
       autofocus: true,
