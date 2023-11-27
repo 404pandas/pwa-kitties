@@ -1,9 +1,8 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const WebpackPwaManifest = require("webpack-pwa-manifest");
 const path = require("path");
-// Require the InjectManifest class of the WorkBoxPlugin 
+// Require the InjectManifest class of the WorkBoxPlugin
 const { InjectManifest } = require("workbox-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = () => {
   return {
@@ -22,8 +21,6 @@ module.exports = () => {
         template: "./index.html",
         title: "K.I.T.T.I.E.S",
       }),
-      // Css extract plugin
-      new MiniCssExtractPlugin(),
       // Injects the custom service worker
       new InjectManifest({
         swSrc: "./src-sw.js",
@@ -37,10 +34,10 @@ module.exports = () => {
         short_name: "K.I.T.T.I.E.S.",
         description: "Thoughts that even cats can't tear up!",
         // Theme and background color pulled from duotone-light.min.css
-        background_color: '#faf8f5',
+        background_color: "#faf8f5",
         theme_color: "#b29762",
-        start_url: "./",
-        publicPath: "./",
+        start_url: "/",
+        publicPath: "/",
         icons: [
           {
             src: path.resolve("src/images/logoNew.png"),
@@ -58,22 +55,25 @@ module.exports = () => {
         // that the test requires a case-insensitive match
         {
           test: /\.css$/i,
-          use: [MiniCssExtractPlugin.loader, 'css-loader'],
+          use: ["style-loader", "css-loader"],
         },
         // Image loader
-        {
-          test: /\.(png|svg|jpg|jpeg|gif)$/i,
-          type: 'asset/resource',
-        },
+        // {
+        //   test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        //   type: "asset/resource",
+        // },
         {
           test: /\.m?js$/,
           exclude: /node_modules/,
           // Babel-loader in order to use ES6.
           use: {
-            loader: 'babel-loader',
+            loader: "babel-loader",
             options: {
-              presets: ['@babel/preset-env'],
-              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
+              presets: ["@babel/preset-env"],
+              plugins: [
+                "@babel/plugin-proposal-object-rest-spread",
+                "@babel/transform-runtime",
+              ],
             },
           },
         },

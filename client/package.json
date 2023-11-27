@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack --mode production",
-    "start": "webpack --watch"
+    "start": "webpack --watchAll"
   },
   "author": "Mary Elenius",
   "license": "MIT",
@@ -16,7 +16,6 @@
     "css-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
     "http-server": "^0.11.1",
-    "mini-css-extract-plugin": "^2.7.2",
     "style-loader": "^3.2.1",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0",
@@ -25,6 +24,7 @@
     "workbox-webpack-plugin": "^6.2.4"
   },
   "dependencies": {
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
     "code-mirror-themes": "^1.0.0",
     "idb": "^6.1.2"
   }
