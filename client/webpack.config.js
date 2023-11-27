@@ -34,6 +34,7 @@ module.exports = () => {
         name: "Kitten Impregnable Thoughts Text In-Line Editing Software",
         short_name: "K.I.T.T.I.E.S.",
         description: "Thoughts that even cats can't tear up!",
+        favicon: "./favicon.ico",
         // Theme and background color pulled from duotone-light.min.css
         background_color: "#faf8f5",
         theme_color: "#b29762",
