@@ -29,7 +29,7 @@ export const putDb = async (content) => {
   const store = tx.objectStore("kitties");
 
   // Uses the .add() method on the store and passes in the content.
-  const request = store.add({ id: 1, kitties: content });
+  const request = store.add({ id: id, kitties: content });
 
   // Gets confirmation of the request.
   const result = await request;
