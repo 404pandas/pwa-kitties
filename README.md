@@ -119,10 +119,19 @@ Follow the prompts to complete the installation to operate this app offline!
 
 ## Roadmap
 
-- [x] MVP
-- [x] Cat theme
-- [x] Deploy to render
-- [ ] Create walkthrough video
+#### MVP
+
+- [x] Starter Code added
+- [x] indexDB functionality
+- [x] Webpack functionality
+- [x] Service Worker functionality
+- [x] manifest.json created w/ npm run build
+- [x] Install button functionality
+- [x] Deployed
+
+#### Future Development
+
+- [ ] Add front end
 
 See the [open issues](https://github.com/404pandas/pwa-kitties/issues) for a full list of proposed features (and known issues).
 
