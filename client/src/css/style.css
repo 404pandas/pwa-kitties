@@ -20,6 +20,10 @@ h1 {
   font-size: 22px;
 }
 
+.CodeMirror-wrap {
+  height: 100vh !important;
+}
+
 #navbar {
   height: var(--navbar-height);
   background-color: var(--primary);
