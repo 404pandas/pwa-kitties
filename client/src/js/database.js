@@ -34,14 +34,19 @@ export const putDb = async (content) => {
   // Gets confirmation of the request.
   const result = await request;
 
-  result
-    ? console.log("*************************************")(console.log(result))(
-        console.log("Data saved to the database:", result.value)
-      )
-    : console.log(
-        "The cat ran away with the note! It wasn't saved to the database!"
-      );
-  return result?.value;
+  if (result !== undefined) {
+    console.log("Data saved to the database, ID:", result);
+
+    // Fetch the newly inserted data to confirm it was saved correctly.
+    const savedData = await store.get(result);
+    console.log("Saved data:", savedData.value);
+    return savedData.value;
+  } else {
+    console.log(
+      "The cat ran away with the note! It wasn't saved to the database!"
+    );
+    return null;
+  }
 };
 
 // Exports a function to get the database.
