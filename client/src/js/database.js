@@ -17,7 +17,7 @@ const initdb = async () =>
 
 // Exports a function to POST to the database.
 export const putDb = async (content) => {
-  console.log("Post to the database");
+  console.log("Put to the database");
 
   // Creates a connection to the kitties database and version.
   const kittiesDb = await openDB("kitties", 1);
@@ -29,11 +29,11 @@ export const putDb = async (content) => {
   const store = tx.objectStore("kitties");
 
   // Uses the .put() method on the store and passes in the content.
-  const request = store.put({ id: 1, kitties: content });
+  const request = store.put({ id: 1, value: content });
 
   // Gets confirmation of the request.
   const result = await request;
-  console.log("Data saved to the database:", result.values);
+  console.log("Data saved to the database:", result.value);
 };
 
 // Exports a function to get the database.
@@ -56,9 +56,9 @@ export const getDb = async () => {
   // Gets confirmation of the request.
   const result = await request;
   result
-    ? console.log("Notes retrieved from database:", result.kitties)
+    ? console.log("Notes retrieved from database:", result.value)
     : console.log("No notes found in database!");
-  return result?.kitties;
+  return result?.value;
 };
 
 // Starts database
