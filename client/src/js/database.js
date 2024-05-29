@@ -33,7 +33,12 @@ export const putDb = async (content) => {
 
   // Gets confirmation of the request.
   const result = await request;
-  console.log("Data saved to the database:", result.value);
+  result
+    ? console.log("Data saved to the database:", result.value)
+    : console.log(
+        "The cat ran away with the note! It wasn't saved to the database!"
+      );
+  return result?.value;
 };
 
 // Exports a function to get the database.
