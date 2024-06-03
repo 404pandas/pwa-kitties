@@ -5,7 +5,7 @@
   --whitesmoke: #f5f5f5;
   --dark: #222;
   --duotone-light: #272822;
-  --navbar-height: 50px;
+  --navbar-height: max-content;
 }
 
 body {

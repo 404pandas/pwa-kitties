@@ -74,5 +74,17 @@ export const getDb = async () => {
   return result?.value;
 };
 
+export const deleteDb = async () => {
+  console.log("Uh oh! The cat ran away with your notes!");
+  const kittiesDb = await openDB("kitties", 1);
+  const tx = kittiesDb.transaction("kitties", "readwrite");
+  const store = tx.objectStore("kitties");
+  const request = store.delete(1);
+  await request;
+
+  console.log("Note has been removed from the database");
+  return true;
+};
+
 // Starts database
 initdb();
